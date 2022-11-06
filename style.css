@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bgcard-color: white;
+
+    --bgbutton-color:  #02799D;
+    --fc-button: white;
+
+    --ff-text:'Roboto', sans-serif;;
+    --fc-text: hsla(194, 68%, 15%, 1);
+}
+
+body, input, button {
+    font-size: 1.6rem;
+}
+
+body {
+    font-family: var(--ff-text) ;
+    color: var(--fc-text);
+
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgb(170, 45, 253) 100%);
+
+   display: grid;
+   place-content: center;
+
+    height: 100vh;
+}
+
+.error {
+    position: absolute;
+    background-color: hsla(0, 86%, 59%, 1);
+    color: white;
+    top:0;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    height: 3.6rem;
+    padding: 0.8rem;
+
+    font-weight: bold;
+   
+    visibility: hidden;
+     opacity: 0;  
+}
+
+.error.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card {
+    background-color: var(--bgcard-color);
+    display: flex;
+    flex-direction: column;
+    padding: 4.8rem 6.4rem 6.4rem;
+    gap: 15px;
+
+    max-width: 42.8rem;
+    height: 35.0rem;
+
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.6rem;
+
+    margin: 13rem auto;
+}
+
+.btnImc {
+    background-color: var(--bgbutton-color);
+    color: var(--fc-button);
+    height: 24rem;
+}
+
+.btnImc:hover {
+    background-color: #093b4b;
+}
+
+
+.result-wrapper {
+    background-color: #1e1e1ead;
+    position: absolute;
+    inset: 0;
+
+    display: grid;
+    place-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bgcard-color);
+    width: 30rem;
+    height: 15rem;
+
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.6rem;
+
+    position: relative;
+}
+
+.result-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.result button {
+    background: none;
+    border: none;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    cursor: pointer;
+}
+
+.result button:hover {
+    transform: scale(1.1);
+}

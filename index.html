@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+        <div class="error">
+            Digite somente números
+        </div>
+
+      <div class="card">
+        <h2>Cálculo de IMC</h2>
+        <p>Peso (kg)</p>
+        <input type="number" id="weight" />
+        <p>Altura (cm)</p>
+        <input type="number" id="height" />
+        <button class="btnImc">Calcular IMC</button>
+      </div>
+
+      <div class="result-wrapper">
+        <div class="result">
+            <button class="close">
+                <img src="/close.svg" alt="">
+            </button>
+
+          <h3>Seu IMC é de 28</h3>
+        </div>
+      </div>
+
+    </main>
+  </body>
+  <script src="/script.js" type="module"></script>
+</html>
